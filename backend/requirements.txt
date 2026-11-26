@@ -6,7 +6,7 @@
 #
 aiosqlite==0.22.1
     # via -r requirements.in
-alembic==1.19.1
+alembic==1.20.1
     # via -r requirements.in
 annotated-doc==0.0.5
     # via fastapi
@@ -14,6 +14,7 @@ annotated-types==0.8.0
     # via pydantic
 anyio==4.14.2
     # via
+    #   fastapi
     #   httpx
     #   starlette
     #   watchfiles
@@ -21,7 +22,7 @@ argon2-cffi==25.1.0
     # via -r requirements.in
 argon2-cffi-bindings==25.1.0
     # via argon2-cffi
-asyncpg==0.31.0
+asyncpg==0.32.0
     # via -r requirements.in
 beautifulsoup4==4.15.0
     # via -r requirements.in
@@ -36,14 +37,16 @@ click==8.4.2
     # via uvicorn
 dnspython==2.8.0
     # via email-validator
-email-validator==2.3.0
+email-validator==2.4.0
     # via -r requirements.in
-fastapi==0.141.1
+fastapi==0.165.0
     # via
     #   -r requirements.in
     #   sentry-sdk
-greenlet==3.5.4
-    # via -r requirements.in
+greenlet==3.5.6
+    # via
+    #   -r requirements.in
+    #   sqlalchemy
 gunicorn==26.0.0
     # via -r requirements.in
 h11==0.16.0
@@ -65,72 +68,79 @@ mako==1.4.1
     # via alembic
 markupsafe==3.0.3
     # via mako
+opentelemetry-api==1.45.2
+    # via fastapi
 packaging==26.3
     # via gunicorn
 prometheus-client==0.26.0
     # via -r requirements.in
-psycopg[binary]==3.3.4
+psycopg[binary]==3.3.9
     # via -r requirements.in
-psycopg-binary==3.3.4
+psycopg-binary==3.3.9
     # via psycopg
 pycparser==3.0
     # via cffi
-pydantic==2.13.4
+pydantic==2.14.4
     # via
     #   -r requirements.in
     #   fastapi
     #   pydantic-settings
     #   sqlmodel
-pydantic-core==2.46.4
+pydantic-core==2.50.5
     # via pydantic
-pydantic-settings==2.15.0
+pydantic-settings==2.16.3
     # via -r requirements.in
-pyjwt==2.13.0
+pyjwt==2.15.1
     # via -r requirements.in
-python-dotenv==1.2.2
+python-dotenv==1.2.4
     # via
     #   -r requirements.in
     #   pydantic-settings
     #   uvicorn
-python-json-logger==4.1.0
+python-json-logger==4.2.0
     # via -r requirements.in
-pyyaml==6.0.3
+pyyaml==6.0.4
     # via
     #   -r requirements.in
     #   uvicorn
-redis==8.1.0
+redis==8.2.0
     # via -r requirements.in
 sentry-sdk[fastapi]==2.66.1
     # via -r requirements.in
 soupsieve==2.9.2
     # via beautifulsoup4
-sqlalchemy==2.0.51
+sqlalchemy==2.0.58
     # via
     #   -r requirements.in
     #   alembic
     #   sqlmodel
-sqlmodel==0.0.39
+sqlmodel==0.0.50
     # via -r requirements.in
-starlette==1.5.1
+starlette==1.10.0
     # via fastapi
 typing-extensions==4.16.0
     # via
     #   alembic
+    #   anyio
     #   beautifulsoup4
     #   fastapi
+    #   opentelemetry-api
+    #   psycopg
     #   pydantic
     #   pydantic-core
+    #   pydantic-settings
     #   sqlalchemy
     #   sqlmodel
+    #   starlette
     #   typing-inspection
-typing-inspection==0.4.2
+typing-inspection==0.4.5
     # via
     #   fastapi
     #   pydantic
     #   pydantic-settings
 urllib3==2.7.0
     # via sentry-sdk
-uvicorn[standard]==0.52.1
+uvicorn[standard]==0.54.0
     # via -r requirements.in
 uvloop==0.22.1
     # via uvicorn
